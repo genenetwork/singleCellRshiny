@@ -1,3 +1,10 @@
+install.packages("Seurat")
+
+ap <- available.packages()
+View(ap)
+"multtest" %in% rownames(ap)
+
+
 library(shiny)
 library(DT)
 library(Seurat)

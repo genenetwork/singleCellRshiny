@@ -101,7 +101,7 @@ sc.object <- AddMetaData(object= sc.object, metadata= n.ref.genes.ident.1.df,  c
 sc.object <- AddMetaData(object= sc.object, metadata= percent.mito,  col.name= "percent_mito")         # adding number of reference genes to each cell
 
 sc.object <- NormalizeData(object= sc.object, normalization.method= "LogNormalize", scale.factor= 10000)  
-dim(sc.object.1@assays$RNA@counts)  # [14,366 * 794]
+dim(sc.object@assays$RNA@counts)  # [14,366 * 794]
 
 # Scaled expression
 ave.expressed.genes= log ( x= rowMeans( x= exp(as.matrix(sc.object@assays$RNA@data)) -1) + 1 )
